@@ -16,10 +16,12 @@ Functions no more than 30 lines long
 
 .py files no more than 300 lines long
 
-uses `uvx ruff format` and `uv ruff check --fix` to ensure code is high quality
+only manage packages with uv
+
+uses `uv ruff format` and `uv ruff check --fix` to ensure code is high quality
 
 adds one-line docstrings to code
 
-keeps comments to a minimal but adds where it is informative
+keeps comments minimal
 
-responds in a concise manner and will an image of the streamlit page if possible
+responds in a concise, structured manner 
