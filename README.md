@@ -2,7 +2,7 @@
 
 A minimal template for Python projects.
 
-It uses Python 3.11, `uv`, `ruff`, `pytest`, and optional agent support for
+It uses Python 3.11, `uv`, `ruff`, `ty`, `pytest`, and optional agent support for
 AI-assisted development.
 
 ## Quickstart
@@ -17,6 +17,7 @@ uv run pytest
 ```bash
 uv run ruff format
 uv run ruff check
+uv run ty check
 uv run pytest
 uv build
 ```
@@ -26,6 +27,7 @@ uv build
 - `src/` package layout
 - `uv` dependency management
 - `ruff` formatting and linting
+- `ty` type checking
 - `pytest` test discovery
 - GitHub Actions CI
 - Generic agent instructions in `AGENTS.md`
