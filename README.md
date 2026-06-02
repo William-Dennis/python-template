@@ -29,18 +29,22 @@ uv build
 - `pytest` test discovery
 - GitHub Actions CI
 - Generic agent instructions in `AGENTS.md`
-- Optional OpenCode skills and plugins under `.opencode/`
+- Optional OpenCode config, agents, skills, and plugins under `.opencode/`
 
 ## Optional Agent Support
 
 This template works as a normal Python project without OpenCode. If you use
 AI coding agents, the repository also includes:
 
-- `.github/agents/python-engineer.agent.md` for GitHub Copilot agents
+- `opencode.json` with conservative default permissions and useful commands
+- `.opencode/agents/python-engineer.md` for focused Python implementation work
+- `.opencode/skills/dev-workflow` for planned, verified changes
 - `.opencode/skills/grill-me` to stress-test a plan before implementation
 - `.opencode/skills/plan-change` for lightweight change planning
 - `.opencode/skills/code-review` for correctness-first reviews
 - `.opencode/skills/debug` for structured debugging
+- `.opencode/skills/session-retro` to capture lessons and follow-ups
+- `.opencode/skills/caveman` for terse technical communication
 - `.opencode/plugins/write-size-guard.js` to prevent oversized generated writes
 
 Optional telemetry plugins live in `.opencode/plugins-available/`. Copy one into

@@ -1,6 +1,10 @@
 ---
-name: Python Engineer
 description: Implements small, well-tested Python changes using uv, ruff, and pytest.
+mode: subagent
+permission:
+  read: allow
+  edit: allow
+  bash: ask
 ---
 
 # Python Engineer
