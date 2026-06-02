@@ -45,7 +45,7 @@ AI coding agents, the repository also includes:
 - `.opencode/skills/debug` for structured debugging
 - `.opencode/skills/session-retro` to capture lessons and follow-ups
 - `.opencode/skills/caveman` for terse technical communication
-- `.opencode/plugins/write-size-guard.js` to prevent oversized generated writes
+- `.opencode/plugins/write-size-guard.ts` to prevent oversized generated writes
 
 Optional telemetry plugins live in `.opencode/plugins-available/`. Copy one into
 `.opencode/plugins/` and restart OpenCode to enable it.

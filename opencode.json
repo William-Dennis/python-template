@@ -4,6 +4,7 @@
   "skills": {
     "paths": [".opencode/skills"]
   },
+  "plugin": ["./.opencode/plugins/write-size-guard.ts"],
   "agent": {
     "python-engineer": {
       "description": "Implements small, well-tested Python changes using uv, ruff, and pytest.",
@@ -11,24 +12,30 @@
       "permission": {
         "read": "allow",
         "edit": "allow",
-        "bash": "ask"
+        "bash": {
+          "*": "ask",
+          "uv *": "allow"
+        }
       }
     }
   },
   "command": {
     "check": {
       "description": "Run format, lint, tests, and build checks",
-      "prompt": "Run the project checks and report failures clearly: `uv run ruff format --check`, `uv run ruff check`, `uv run pytest`, and `uv build`."
+      "template": "Run the project checks and report failures clearly: `uv run ruff format --check`, `uv run ruff check`, `uv run pytest`, and `uv build`."
     },
     "grill-me": {
       "description": "Stress-test a plan or design",
-      "prompt": "Use the grill-me skill to stress-test this plan or design: $ARGUMENTS"
+      "template": "Use the grill-me skill to stress-test this plan or design: $ARGUMENTS"
     }
   },
   "permission": {
     "read": "allow",
     "edit": "allow",
-    "bash": "ask",
+    "bash": {
+      "*": "ask",
+      "uv *": "allow"
+    },
     "skill": "allow"
   },
   "share": "disabled"
