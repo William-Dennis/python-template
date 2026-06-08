@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from python-template!")
+from __future__ import annotations

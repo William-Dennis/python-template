@@ -19,6 +19,7 @@ This is a generic Python project template using `uv`, `ruff`, `ty`, and `pytest`
 - Run `uv run ruff check`, `uv run ty check`, and `uv run pytest` before finishing code changes.
 - Do not add runtime dependencies unless they are required by package behavior.
 - Prefer clear, boring Python over clever abstractions.
+- Use `logging` (stdlib) for all output — never `print()`. Configure via `logging.basicConfig()` in entry points.
 
 ## Optional Agent Support
 
