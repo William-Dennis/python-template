@@ -1,10 +1,16 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": ["AGENTS.md"],
+  "instructions": [
+    "AGENTS.md"
+  ],
   "skills": {
-    "paths": [".opencode/skills"]
+    "paths": [
+      ".opencode/skills"
+    ]
   },
-  "plugin": ["./.opencode/plugins/write-size-guard.ts"],
+  "plugin": [
+    "./.opencode/plugins/write-size-guard.ts"
+  ],
   "agent": {
     "python-engineer": {
       "description": "Implements small, well-tested Python changes using uv, ruff, ty, and pytest.",
@@ -38,5 +44,6 @@
     },
     "skill": "allow"
   },
-  "share": "disabled"
+  "share": "disabled",
+  "model": "opencode/big-pickle"
 }
