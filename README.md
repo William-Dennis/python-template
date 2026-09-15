@@ -42,9 +42,7 @@ AI coding agents, the repository also includes:
 - `.opencode/agents/python-engineer.md` for focused Python implementation work
 - `.opencode/skills/dev-workflow` for planned, verified changes
 - `.opencode/skills/grill-me` to stress-test a plan before implementation
-- `.opencode/skills/plan-change` for lightweight change planning
-- `.opencode/skills/code-review` for correctness-first reviews
-- `.opencode/skills/debug` for structured debugging
+- `.opencode/skills/code-review` for actionable code reviews
 - `.opencode/skills/session-retro` to capture lessons and follow-ups
 - `.opencode/skills/caveman` for terse technical communication
 - `.opencode/plugins/write-size-guard.ts` to prevent oversized generated writes
