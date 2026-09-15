@@ -6,10 +6,42 @@
     "paths": [".opencode/skills"]
   },
   "plugin": ["./.opencode/plugins/write-size-guard.ts"],
+  "mcp": {
+    "crossref": {
+      "type": "local",
+      "command": ["npx", "-y", "@cyanheads/crossref-mcp-server"],
+      "enabled": false
+    },
+    "openalex": {
+      "type": "local",
+      "command": ["npx", "-y", "openalex-research-mcp"],
+      "enabled": false
+    },
+    "pubmed": {
+      "type": "local",
+      "command": ["npx", "-y", "@cyanheads/pubmed-mcp-server"],
+      "enabled": false
+    }
+  },
+  "tools": {
+    "crossref_*": false,
+    "openalex_*": false,
+    "pubmed_*": false
+  },
   "agent": {
     "python-engineer": {
       "description": "Implements small, well-tested Python changes using uv, ruff, ty, and pytest.",
       "mode": "subagent"
+    },
+    "research": {
+      "description": "Read-only research agent for academic docs via CrossRef, OpenAlex, and PubMed MCPs.",
+      "mode": "subagent",
+      "model": "opencode-go/mimo-v2.5",
+      "tools": {
+        "crossref_*": true,
+        "openalex_*": true,
+        "pubmed_*": true
+      }
     }
   },
   "command": {
@@ -90,7 +122,11 @@
       "chown *": "deny",
       "sudo *": "deny"
     },
-    "skill": "allow"
+    "skill": "allow",
+    "external_directory": {
+      "/tmp/**": "allow",
+      "/private/tmp/**": "allow"
+    }
   },
   "share": "disabled"
 }
