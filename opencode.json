@@ -30,7 +30,7 @@
   },
   "agent": {
     "python-engineer": {
-      "description": "Implements small, well-tested Python changes using uv, ruff, ty, and pytest.",
+      "description": "Implements small, well-tested Python changes using TDD, SOLID, uv, ruff, ty, and pytest.",
       "mode": "subagent"
     },
     "research": {
