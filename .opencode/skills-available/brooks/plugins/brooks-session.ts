@@ -9,9 +9,14 @@
  * `skills-available/brooks/README.md`), where native skill discovery picks
  * them up — no install step or path baking needed.
  *
- * On `session.created` this records the available skill index to
- * `.opencode/metrics/brooks-session.jsonl` for observability. Telemetry must
- * never break the session.
+ * On `session.created` this appends `{ts, session_id, event}` to
+ * `.opencode/metrics/brooks-session.jsonl` and logs the skill index via
+ * `client.app.log`, for observability. Intentionally not replicated: the
+ * Claude hook injected the index as agent-visible `additionalContext` —
+ * under OpenCode that is unnecessary because native skill discovery lists
+ * the six skills to the agent once the bundle is enabled (see
+ * `skills-available/brooks/README.md`). Telemetry must never break the
+ * session.
  */
 import { appendFileSync, mkdirSync } from "fs"
 import { dirname, join, resolve } from "path"
@@ -36,12 +41,16 @@ export const BrooksSession = async ({
   directory: string
   client?: any
 }) => {
-  const sessionId = randomUUID()
+  const instanceId = randomUUID()
 
   return {
     event: async (ctx?: any) => {
+      if (ctx?.event?.type !== "session.created") return
+      // Prefer the real OpenCode session ID; fall back to this plugin
+      // instance's ID when the event payload shape is unexpected.
+      const sessionId = ctx?.event?.properties?.info?.id ?? instanceId
+
       try {
-        if (ctx?.event?.type !== "session.created") return
         const out = join(
           resolve(directory),
           ".opencode",
@@ -58,6 +67,11 @@ export const BrooksSession = async ({
           }) + "\n",
           "utf-8",
         )
+      } catch {
+        // Telemetry must not break the session.
+      }
+
+      try {
         await client?.app?.log?.({
           body: {
             service: "brooks-session",
