@@ -32,5 +32,4 @@ This is a generic Python project template using `uv`, `ruff`, `ty`, and `pytest`
 - `.opencode/agents/` contains reusable OpenCode agents (`python-engineer`, `research` with CrossRef/OpenAlex/PubMed MCPs disabled by default).
 - `.opencode/skills/` contains reusable workflow skills for AI-assisted development.
 - `.opencode/skills-available/brooks/` contains the full opt-in brooks-lint review suite.
-- `.opencode/plugins/write-size-guard.ts` prevents oversized generated writes.
-- `.opencode/plugins-available/` contains optional telemetry plugins that can be copied into `.opencode/plugins/` when desired.
+- `.opencode/plugins-available/` contains optional plugins that can be copied into `.opencode/plugins/` when desired.
