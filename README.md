@@ -46,7 +46,6 @@ AI coding agents, the repository also includes:
 - `.opencode/skills/code-review` for actionable code reviews
 - `.opencode/skills/session-retro` to capture lessons and follow-ups
 - `.opencode/skills/caveman` for terse technical communication
-- `.opencode/plugins/write-size-guard.ts` to prevent oversized generated writes
 - `.opencode/skills-available/brooks/` with the full opt-in brooks-lint review suite
 
 Optional telemetry plugins live in `.opencode/plugins-available/`. Copy one into
