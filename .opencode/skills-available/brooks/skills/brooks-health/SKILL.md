@@ -4,9 +4,9 @@ description: >
   Combined codebase health dashboard that scores a project across all four quality
   dimensions — PR quality, architecture, tech debt, and test quality — in a single
   pass, drawing on twelve classic engineering books.
-  Triggers when: user wants an overall quality assessment, asks "how healthy is this
-  codebase?", "run all the checks", "I need a health score before the release", or
-  wants to onboard a new team with a quality overview.
+  Explicit invocation only: load solely when the user names it
+  ("brooks-health" / "brooks health"). Never infer from generic quality,
+  health-score, or "run all the checks" requests.
   Do NOT trigger for: server health checks, HTTP health endpoints, Kubernetes
   liveness/readiness probes, database health, or application uptime. Also do not
   trigger when the user specifically requests only one dimension — use the

@@ -2,7 +2,7 @@
 
 A minimal template for Python projects.
 
-It uses Python 3.11, `uv`, `ruff`, `ty`, `pytest`, and optional agent support for
+It uses Python 3.12, `uv`, `ruff`, `ty`, `pytest`, and optional agent support for
 AI-assisted development.
 
 ## Quickstart
@@ -17,7 +17,7 @@ uv run pytest
 ```bash
 uv run ruff format
 uv run ruff check
-uv run ty check
+uv run ty check src/
 uv run pytest
 uv build
 ```
@@ -31,7 +31,7 @@ uv build
 - `pytest` test discovery
 - GitHub Actions CI
 - Generic agent instructions in `AGENTS.md`
-- Optional OpenCode config, agents, skills, and plugins under `.opencode/`
+- Optional OpenCode config, agents, and skills under `.opencode/`
 
 ## Optional Agent Support
 
@@ -46,7 +46,7 @@ AI coding agents, the repository also includes:
 - `.opencode/skills/code-review` for actionable code reviews
 - `.opencode/skills/session-retro` to capture lessons and follow-ups
 - `.opencode/skills/caveman` for terse technical communication
-- `.opencode/skills-available/brooks/` with the full opt-in brooks-lint review suite
+- `.opencode/skills-available/brooks/` with the opt-in, explicit-invocation brooks-lint skills
 
-Optional telemetry plugins live in `.opencode/plugins-available/`. Copy one into
-`.opencode/plugins/` and restart OpenCode to enable it.
+To enable brooks, copy `.opencode/skills-available/brooks/skills/*` into
+`.opencode/skills/`.

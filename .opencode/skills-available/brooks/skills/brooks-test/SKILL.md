@@ -6,9 +6,9 @@ description: >
   Working Effectively with Legacy Code — that diagnoses structural problems in an
   existing test suite: brittleness, mock abuse, coverage illusions, slow execution,
   poor readability.
-  Triggers when: user asks about test quality, shares test files for review, or
-  expresses frustration: "tests keep breaking whenever I change anything", "our tests
-  take forever", "tests pass but bugs still reach production", or "we have too many mocks".
+  Explicit invocation only: load solely when the user names it
+  ("brooks-test" / "brooks test"). Never infer from generic test-quality
+  or failing-test requests.
   Do NOT trigger for: writing new tests from scratch (use the regular test-writing
   workflow) or testing framework/syntax questions — this skill reviews an existing
   suite for structural quality problems, not individual test authoring.

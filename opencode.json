@@ -1,10 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode-go/mimo-v2.5",
   "instructions": ["AGENTS.md"],
-  "skills": {
-    "paths": [".opencode/skills"]
-  },
   "mcp": {
     "crossref": {
       "type": "local",
@@ -32,7 +28,6 @@
     "research": {
       "description": "Read-only research agent for academic docs and dependency research via CrossRef, OpenAlex, and PubMed MCPs.",
       "mode": "subagent",
-      "model": "opencode-go/mimo-v2.5",
       "tools": {
         "crossref_*": true,
         "openalex_*": true,
@@ -43,7 +38,7 @@
   "command": {
     "check": {
       "description": "Run format, lint, type, test, and build checks",
-      "template": "Run the project checks and report failures clearly: `uv run ruff format --check`, `uv run ruff check`, `uv run ty check`, `uv run pytest`, and `uv build`."
+      "template": "Run the project checks and report failures clearly: `uv run ruff format --check`, `uv run ruff check`, `uv run ty check src/`, `uv run pytest`, and `uv build`."
     },
     "grill-me": {
       "description": "Stress-test a plan or design",

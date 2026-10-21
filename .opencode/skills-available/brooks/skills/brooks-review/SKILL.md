@@ -4,12 +4,9 @@ description: >
   PR code review that surfaces decay risks, design smells, and maintainability
   issues with concrete Symptom → Source → Consequence → Remedy findings, drawing
   on twelve classic engineering books.
-  Triggers when: user asks to review code, check a PR, shares a diff or pastes
-  code asking "does this look right?" / "any issues here?" / "ready to merge?",
-  or asks for feedback on a function, class, or file.
-  Also triggers when user mentions: code smells / refactoring / clean architecture /
-  DDD / SOLID principles / Hyrum's Law / deep modules / tactical programming /
-  conceptual integrity / Brooks's Law / Mythical Man-Month / second system effect.
+  Explicit invocation only: load solely when the user names it
+  ("brooks-review" / "brooks review"). Never infer from generic review,
+  feedback, or "does this look right?" requests.
   Do NOT trigger for: questions about how to write code from scratch, language syntax
   questions, or framework/tool questions where no existing code is shared.
 ---

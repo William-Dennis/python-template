@@ -6,23 +6,37 @@ readme = "README.md"
 authors = [
     { name = "William Dennis", email = "wwdennis.home@gmail.com" }
 ]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
 dev = [
-    "pytest>=8.4.0,<10",
-    "ruff>=0.14.10,<0.15",
-    "ty>=0.0.42,<0.1",
+    "pytest>=9.1.1,<10",
+    "ruff>=0.17.1,<0.18",
+    "ty>=0.0.90,<0.1",
 ]
 
+[tool.uv]
+required-version = ">=0.12.13"
+
 [tool.ruff]
-line-length = 88
-target-version = "py311"
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["python_template"]
+
+[tool.ty.src]
+include = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "-ra"
 
 [build-system]
-requires = ["uv_build>=0.9.17,<0.10.0"]
+requires = ["uv_build>=0.13.4,<0.14.0"]
 build-backend = "uv_build"

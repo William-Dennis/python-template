@@ -1,26 +1,21 @@
 ---
 name: session-retro
-description: Use at the end of meaningful work to capture lessons, follow-ups, and possible improvements without assuming any specific project domain.
+description: Use at the end of meaningful work to capture lessons, follow-ups, and process improvements.
 ---
 
 # Session Retro
 
-Use this skill to turn completed work into reusable project learning.
-
-## Workflow
-
-1. Summarize the objective and outcome.
-2. List what changed and what was verified.
-3. Capture surprises, failures, or tool friction.
-4. Identify follow-up issues or documentation updates.
-5. Recommend one concrete improvement for future work.
+Use this skill to capture what worked, what didn't, and what to change.
 
 ## Output
 
-- Outcome
-- Verification
-- Lessons learned
-- Follow-ups
-- Suggested improvement
+1. **What went well** — patterns to keep.
+2. **What went wrong** — root causes, not symptoms.
+3. **Follow-ups** — concrete next actions with owners.
+4. **Process changes** — rules or skills to update.
 
-Do not create files unless the user asks to persist the retro.
+## Rules
+
+- Be honest, not diplomatic.
+- Focus on systemic fixes, not one-off patches.
+- If nothing meaningful happened, say so and skip.
