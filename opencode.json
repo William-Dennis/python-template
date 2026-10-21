@@ -38,7 +38,7 @@
   "command": {
     "check": {
       "description": "Run format, lint, type, test, and build checks",
-      "template": "Run the project checks and report failures clearly: `uv run ruff format --check`, `uv run ruff check`, `uv run ty check src/`, `uv run pytest`, and `uv build`."
+      "template": "Run the project checks and report failures clearly: `uv run ruff format --check`, `uv run ruff check`, `uv run ty check`, `uv run pytest`, and `uv build`."
     },
     "grill-me": {
       "description": "Stress-test a plan or design",

@@ -17,7 +17,7 @@ uv run pytest
 ```bash
 uv run ruff format
 uv run ruff check
-uv run ty check src/
+uv run ty check
 uv run pytest
 uv build
 ```
