@@ -2,8 +2,7 @@
 name: python-engineer
 description: Implements small, well-tested Python changes using TDD, SOLID, uv, ruff, ty, and pytest.
 tools: Read, Edit, Write, Bash, Grep, Glob
-model: claude-sonnet-5-5
-effort: medium
+model: sonnet
 ---
 
 

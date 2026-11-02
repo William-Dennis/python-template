@@ -3,6 +3,7 @@ name: research
 description: Read-only research agent for academic docs and dependency research via CrossRef, OpenAlex, and PubMed MCPs.
 tools: Read, Grep, Glob, WebFetch
 model: haiku
+omitClaudeMd: true
 mcpServers:
   - crossref:
       type: stdio
