@@ -44,7 +44,10 @@
       "Bash(gh pr create *)",
       "Bash(git checkout *)",
       "Bash(git worktree *)",
-      "Bash(opencode run *)"
+      "Bash(opencode run *)",
+      "mcp__crossref",
+      "mcp__openalex",
+      "mcp__pubmed"
     ],
     "ask": [
       "Bash(git remote *)",
