@@ -44,7 +44,7 @@ AI coding agents, the repository also includes:
 - `.opencode/agents/research.md` for read-only academic research (CrossRef/OpenAlex/PubMed MCPs, disabled by default)
 - `.opencode/skills/dev-workflow` for planned, verified changes
 - `.opencode/skills/grill-me` to stress-test a plan before implementation
-- `.opencode/skills/code-review` for actionable code reviews
+- `.opencode/skills/strict-code-review` for actionable code reviews
 - `.opencode/skills/session-retro` to capture lessons and follow-ups
 - `.opencode/skills/caveman` for terse technical communication
 - `.opencode/skills-available/brooks/` with the opt-in, explicit-invocation brooks-lint skills
