@@ -32,3 +32,4 @@ This is a generic Python project template using `uv`, `ruff`, `ty`, and `pytest`
 - `.opencode/agents/` contains reusable OpenCode agents (`python-engineer`, `research` with CrossRef/OpenAlex/PubMed MCPs disabled by default).
 - `.opencode/skills/` contains reusable workflow skills for AI-assisted development.
 - `.opencode/skills-available/brooks/` contains the opt-in brooks-lint skills. They are explicit-invocation only; copy `skills/*` into `.opencode/skills/` to enable them.
+- `CLAUDE.md` imports this file for Claude Code. `.claude/` holds its settings, agents, and commands; `.claude/skills` symlinks to `.opencode/skills`.

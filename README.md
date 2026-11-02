@@ -32,6 +32,7 @@ uv build
 - GitHub Actions CI
 - Generic agent instructions in `AGENTS.md`
 - Optional OpenCode config, agents, and skills under `.opencode/`
+- Optional Claude Code config under `.claude/` and `CLAUDE.md`
 
 ## Optional Agent Support
 
@@ -47,6 +48,14 @@ AI coding agents, the repository also includes:
 - `.opencode/skills/session-retro` to capture lessons and follow-ups
 - `.opencode/skills/caveman` for terse technical communication
 - `.opencode/skills-available/brooks/` with the opt-in, explicit-invocation brooks-lint skills
+
+Claude Code support (`CLAUDE.md`, `.claude/`):
+
+- `CLAUDE.md` imports `AGENTS.md` so both tools share one set of instructions
+- `.claude/settings.json` sets Sonnet 5.5 at medium effort and mirrors the OpenCode permissions
+- `.claude/agents/python-engineer.md` (Sonnet 5.5, medium) and `.claude/agents/research.md` (Haiku, MCPs scoped to this agent only)
+- `.claude/skills` is a symlink to `.opencode/skills`, so skills are shared
+- `.claude/commands/` has `/check` and `/grill-me`
 
 To enable brooks, copy `.opencode/skills-available/brooks/skills/*` into
 `.opencode/skills/`.
