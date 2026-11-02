@@ -27,6 +27,7 @@ Always set the Bash tool's `timeout` on foreground runs.
 - Agents: `python-engineer` (edits), `research`, `docs-reader`, `plan` (read-only), or omit `--agent`.
 - Fallback: on a model or auth error, retry once with `-m opencode/big-pickle`, then report the failure. Never switch models silently.
 - Treat exit 0 with empty output as a failure.
+- A run that ends on a denied or failed tool call has no result: treat it as incomplete, report what was denied, and do not summarize it as success.
 - Summarize the JSON result for the user. Keep raw JSON out of chat unless asked.
 - After an edit run, review `git diff` and run `uv run ruff check`, `uv run ty check`, and `uv run pytest` yourself. Do not trust the delegate's report alone.
 - Do not chain: a follow-up is a new explicit delegation.
