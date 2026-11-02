@@ -54,7 +54,8 @@ Claude Code support (`CLAUDE.md`, `.claude/`):
 - `CLAUDE.md` imports `AGENTS.md` so both tools share one set of instructions
 - `.claude/settings.json` sets Sonnet 5.5 at medium effort and mirrors the OpenCode permissions
 - `.claude/agents/python-engineer.md` (Sonnet 5.5, medium) and `.claude/agents/research.md` (Haiku, MCPs scoped to this agent only)
-- `.claude/skills` is a symlink to `.opencode/skills`, so skills are shared
+- `.claude/skills` is a copy of `.opencode/skills`, kept in sync by `tests/test_skills_parity.py`
+- `.claude/skills/delegate-opencode` is Claude-only. It runs one headless `opencode run` task, in the foreground or background, with model `opencode-go/muse-spark-1.3-contributor` and fallback `opencode/big-pickle`. `--auto` is denied.
 - `.claude/commands/` has `/check` and `/grill-me`
 
 To enable brooks, copy `.opencode/skills-available/brooks/skills/*` into
