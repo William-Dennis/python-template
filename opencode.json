@@ -25,6 +25,14 @@
       "description": "Implements small, well-tested Python changes using TDD, SOLID, uv, ruff, ty, and pytest.",
       "mode": "subagent"
     },
+    "docs-reader": {
+      "description": "Fetches official online docs and returns concise summaries with source URLs. Use proactively for API and docs lookups.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    },
     "research": {
       "description": "Read-only research agent for academic docs and dependency research via CrossRef, OpenAlex, and PubMed MCPs.",
       "mode": "subagent",
