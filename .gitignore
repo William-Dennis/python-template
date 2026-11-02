@@ -209,3 +209,7 @@ __marimo__/
 # Worktrees live ONLY here; everything ignored except the committed marker.
 .worktrees/*
 !.worktrees/.gitkeep
+
+# Claude Code local state
+.claude/settings.local.json
+.claude/worktrees/

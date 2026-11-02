@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: strict-code-review
 description: Use when reviewing a change, pull request, diff, or patch for bugs, regressions, missing tests, and maintainability risks.
 ---
 
